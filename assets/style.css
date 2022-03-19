@@ -1,78 +1,133 @@
 *, *::before, *::after {
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    max-width: 100%;
-    background-color: green;
-    top: 0px;
-    position: sticky;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  body {
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .quiz-box {
-    background-color: white;
-    max-width: 100%;
-    margin: 25vh 25vw;
-    padding: 1%;
-    box-shadow: 0px 0px 10px 1px lightgray;
-  }
-  
-  .question {
-    padding: 15px;
-    font-size: 150%;
-  }
-  
-  .choice-box {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 80%;
-  }
-  
-  .choice {
-    padding: 5px;
-    margin: 2px;
-    background-color: gray;
-    border: 1px solid gray;
-  }
-  
-  .choice:hover {
-    background-color: yellow;
-    border: 1px solid black;
-  }
-  
-  .hint-text {
-    display: none;
-  }
-  
-  .hint-title:hover {
-    display: block;
-  }
-  
-  .directions {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  
-  .directions button {
-    padding: 5px 20px;
-    background-color: gray;
-    border: none;
-  }
-  
-  
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  max-width: 100%;
+  background-color: gainsboro;
+  top: 0px;
+  position: sticky;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 10px 2px lightgray;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+p, label {
+  font-size: 80%;
+  font-weight: 500;
+}
+
+.quiz-box {
+  background-color: white;
+  max-width: 100%;
+  margin: 25vh 25vw;
+  padding: 1%;
+  box-shadow: 0px 0px 10px 1px lightgray;
+}
+
+.question {
+  padding: 15px;
+  font-size: 150%;
+}
+
+.choice-box {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.choice {
+  padding: 5px;
+  margin: 2px;
+  background-color: gainsboro;
+  border: 2px solid gainsboro;
+  border-radius: 5px;
+  text-align: left;
+  color: black;
+}
+
+.choice:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #595959;
+  box-shadow: 0px 0px 5px 0px #8c8c8c;
+}
+
+.choice:focus {
+  background-color: white;
+  color: black;
+  border: 2px solid #595959;
+}
+
+.choice.correct {
+  background-color: #33cc33;
+  border: 2px solid forestgreen;
+}
+
+.choice.incorrect {
+  background-color: #e60000;
+  color: white;
+  border: 2px solid darkred;
+}
+
+.directions {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 10px;
+}
+
+.directions button {
+  padding: 5px 20px;
+  background-color: white;
+  border: none;
+  box-shadow: 0px 0px 25px 1px lightgray;
+}
+
+.directions button:hover {
+  box-shadow: 0px 0px 25px 1px gray;
+}
+
+.bigButton {
+  font-size: 500%;
+  margin: 0 auto;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+#start-button:focus {
+  background-color: green;
+  color: white;
+}
+
+#finish-button:focus {
+  background-color: #e60000;
+  color: white;
+}
+
+
+/* More intuitive places for the buttons */
+.prevButton {
+  margin: 1% 5%
+}
+
+.nextButton {
+  margin: 1% 85%;
+}
+
+.hide {
+  display: none;
+}

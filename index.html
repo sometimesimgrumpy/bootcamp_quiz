@@ -6,36 +6,41 @@
   <link href="assets/style.css" rel="stylesheet">
   <title>Bootcamp Quiz</title>
 </head>
+<body>
     <header>
-    <div id="scoreboard"> Last Score: <br> Best Score: </div>
-    <div id="timer"> Time Left: </div>
+      <div id="scoreboard"> Last Score: <br> Best Score: </div>
+      <div id="timer"> Time Left: </div>
     </header>   
   
-<body>
-
-  
     <div class="quiz-box">
-        <div class="question" data-show="hide">Question?</div>
-        <div class="choice-box" data-multichoice="multichoice">
+        <div class="question hide" id="question">Question?</div>
+        <div class="choice-box hide" id="multichoice">
             <button class="choice">First choice</button>
             <button class="choice">Second choice</button>
             <button class="choice">Third choice</button>
             <button class="choice">Fourth choice</button>
         </div>
-        <hr>
-        <div class="hint-box">
-            <span id="hint-title">Hint</span>
-            <p class="hint-text">Hint text here</p>
-        </div>
 
-        <div class="directions">
-            <button id="startButton" data-ready="startButton button">Start</button>
-            <button id="prevButton" data-prev="prevButton button hide">Prev</button>
-            <button id="nextButton" data-next="nextButton button hide">Next</button>
+        <div class="directions" id="direction-buttons">
+            <button class="bigButton" id="start-button">Start</button>
+            <button class="bigButton hide" id="finish-button">Finish</button>
+            <button class="prevButton hide" id="prevButton">Prev</button>
+            <button class="nextButton hide" id="nextButton">Next</button>
+        </div>
+      
+      
+        <div class="save-score hide" id="score-form">
+          <h2>Great work!</h2>
+            <p>Your final score is: <span id="#score-here">0</span></p>
+            <p>Save your initials to the score board!</p>
+            <form class="">
+              <label for="initials">Initials</label>
+              <input type="text" id="initials" name="initials">
+              <input type="submit" value="Submit" class="choice">
         </div>
   </div>
   
-<!-- <script src=""></script>     -->
+<script src="assets/script.js"></script>    
     
 </body>
 </html>
