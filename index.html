@@ -8,8 +8,18 @@
 </head>
 <body>
     <header>
-      <div id="scoreboard"> Last Score: <br> Best Score: </div>
-      <div id="timer"> Time Left: </div>
+
+      <!-- Does not do anything at this time -->
+      <div id="scoreboard"> 
+      Recent Score: <span id="recent-score">0</span>
+        <br> 
+      Best Score: <span id="best-score">0</span>
+      </div>
+
+      <div id="timer"> 
+        Time Left: <span id="time-left"></span>
+      </div>
+
     </header>   
   
     <div class="quiz-box">
@@ -37,6 +47,13 @@
               <label for="initials">Initials</label>
               <input type="text" id="initials" name="initials">
               <input type="submit" value="Submit" class="choice">
+        </div>
+        
+        <!-- Ran out of time, didn't style -->
+        <div class="high-scores hide" id="score-div">
+          <hr>
+          <h2>Scores</h2>
+          <ul id="score-board"></ul>  
         </div>
   </div>
   
